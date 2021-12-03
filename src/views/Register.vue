@@ -210,4 +210,15 @@ export default {
     max-width: 350px;
   }
 }
+button {
+  background-color: #303030;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+}
 </style>

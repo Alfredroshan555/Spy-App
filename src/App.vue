@@ -2,6 +2,7 @@
   <div class="app-wrapper">
     <div class="app">
       <Navbar v-if="!navigation" />
+      <GoogleMap v-if="user && !mapView" />
       <router-view />
       <Footer v-if="!navigation" />
     </div>
@@ -13,12 +14,14 @@ import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 import firebase from "firebase/app";
 import "firebase/auth";
+import GoogleMap from "./components/GoogleMap.vue";
 export default {
   name: "app",
-  components: { Navbar, Footer },
+  components: { Navbar, Footer, GoogleMap },
   data() {
     return {
       navigation: null,
+      mapView: null,
     };
   },
   created() {
@@ -38,12 +41,21 @@ export default {
       if (
         this.$route.name === "Login" ||
         this.$route.name === "Register" ||
-        this.$route.name === "ForgotPassword"
+        this.$route.name === "ForgotPassword" ||
+        this.$route.name === "Profile"
       ) {
         this.navigation = true;
+        this.mapView = true;
+
         return;
       }
       this.navigation = false;
+      this.mapView = false;
+    },
+  },
+  computed: {
+    user() {
+      return this.$store.state.user;
     },
   },
 

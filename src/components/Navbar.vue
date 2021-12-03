@@ -118,6 +118,7 @@ export default {
     },
     signOut() {
       firebase.auth().signOut();
+      this.$router.push({ name: "Home" });
       window.location.reload();
     },
   },
