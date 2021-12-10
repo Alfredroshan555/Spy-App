@@ -2,7 +2,9 @@
   <div class="app-wrapper">
     <div class="app">
       <Navbar v-if="!navigation" />
-      <GoogleMap v-if="user && !mapView" />
+      <!-- <GoogleMap v-if="user && !mapView" /> -->
+      <!-- <Leaflet v-if="user && !mapView" /> -->
+      <HereMap v-if="user && !mapView" />
       <router-view />
       <Footer v-if="!navigation" />
     </div>
@@ -14,14 +16,17 @@ import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 import firebase from "firebase/app";
 import "firebase/auth";
-import GoogleMap from "./components/GoogleMap.vue";
+// import GoogleMap from "./components/GoogleMap.vue";
+// import Leaflet from "./components/Leaflet.vue";
+import HereMap from "./components/HereMap.vue";
 export default {
   name: "app",
-  components: { Navbar, Footer, GoogleMap },
+  components: { Navbar, Footer, HereMap },
   data() {
     return {
       navigation: null,
       mapView: null,
+      servicesPage: null,
     };
   },
   created() {
@@ -33,6 +38,7 @@ export default {
       }
     });
     this.checkUserRoutes();
+    this.servicePageCheck();
     console.log(firebase.auth().currentUser);
   },
   mounted() {},
@@ -52,6 +58,11 @@ export default {
       this.navigation = false;
       this.mapView = false;
     },
+    servicePageCheck() {
+      if (this.$route.name === "Services") {
+        this.mapView = !this.mapView;
+      }
+    },
   },
   computed: {
     user() {
@@ -62,6 +73,7 @@ export default {
   watch: {
     $route() {
       this.checkUserRoutes();
+      this.servicePageCheck();
     },
   },
 };

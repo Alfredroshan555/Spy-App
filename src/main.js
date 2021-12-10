@@ -6,9 +6,11 @@ import Vue2Editor from "vue2-editor";
 import firebase from "firebase/app";
 import "firebase/auth";
 
-import * as VueGoogleMaps from "vue2-google-maps"
+import * as VueGoogleMaps from "vue2-google-maps";
+import vueCountryRegionSelect from "vue-country-region-select";
 
 Vue.use(Vue2Editor);
+Vue.use(vueCountryRegionSelect);
 
 Vue.config.productionTip = false;
 
@@ -16,7 +18,7 @@ Vue.config.productionTip = false;
 
 Vue.use(VueGoogleMaps, {
     load: {
-        key: "AIzaSyBIRJtrerNQOQ_qX5zZz1i6LK7yDJ4bixc",
+        key: "AIzaSyALSlT0ESoeyai_3T_1--dVGXrUaappIE0",
         libraries: "places"
     }
 });

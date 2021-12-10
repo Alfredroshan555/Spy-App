@@ -4,7 +4,8 @@ import Home from "../views/Home.vue";
 import Register from "../views/Register.vue";
 import Login from "../views/Login.vue";
 import ForgotPassword from "../views/ForgotPassword.vue";
-import Profile from "../views/Profile.vue"
+import Profile from "../views/Profile.vue";
+import Services from "../views/Services.vue"
 
 Vue.use(VueRouter);
 
@@ -47,6 +48,14 @@ const routes = [{
         component: Profile,
         meta: {
             title: 'Profile',
+        },
+    },
+    {
+        path: "/services",
+        name: "Services",
+        component: Services,
+        meta: {
+            title: 'Services',
         },
     },
 ]

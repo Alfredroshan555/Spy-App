@@ -1,0 +1,6 @@
+{
+  "appId": "www.spyapp.com",
+  "appName": "Spy App",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
