@@ -101,7 +101,7 @@ export default {
 </script>
 
 <style scoped>
-#map {
+/* #map {
   width: 60vw;
   min-width: 360px;
   text-align: center;
@@ -136,5 +136,5 @@ export default {
   justify-content: center;
   align-items: center;
   height: 200px;
-}
+} */
 </style>

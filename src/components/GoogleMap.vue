@@ -74,38 +74,38 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.input {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 8px;
-  width: 100%;
-  border: none;
-  background-color: #f2f7f6;
-  padding: 4px 4px 4px 30px;
-  height: 50px;
-  &:focus {
-    outline: none;
-  }
-}
-.button {
-  text-align: center;
-}
-h2 {
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 10px;
-}
-button {
-  background-color: #303030;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 10px;
-}
+// .input {
+//   position: relative;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-bottom: 8px;
+//   width: 100%;
+//   border: none;
+//   background-color: #f2f7f6;
+//   padding: 4px 4px 4px 30px;
+//   height: 50px;
+//   &:focus {
+//     outline: none;
+//   }
+// }
+// .button {
+//   text-align: center;
+// }
+// h2 {
+//   text-align: center;
+//   padding-top: 20px;
+//   padding-bottom: 10px;
+// }
+// button {
+//   background-color: #303030;
+//   border: none;
+//   color: white;
+//   padding: 15px 32px;
+//   text-align: center;
+//   text-decoration: none;
+//   display: inline-block;
+//   font-size: 16px;
+//   border-radius: 10px;
+// }
 </style>

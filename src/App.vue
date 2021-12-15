@@ -3,8 +3,8 @@
     <div class="app">
       <Navbar v-if="!navigation" />
       <!-- <GoogleMap v-if="user && !mapView" /> -->
-      <!-- <Leaflet v-if="user && !mapView" /> -->
-      <HereMap v-if="user && !mapView" />
+      <Leaflet v-if="user && !mapView" />
+      <!-- <HereMap v-if="user && !mapView" /> -->
       <router-view />
       <Footer v-if="!navigation" />
     </div>
@@ -17,11 +17,11 @@ import Footer from "./components/Footer.vue";
 import firebase from "firebase/app";
 import "firebase/auth";
 // import GoogleMap from "./components/GoogleMap.vue";
-// import Leaflet from "./components/Leaflet.vue";
-import HereMap from "./components/HereMap.vue";
+import Leaflet from "./components/Leaflet.vue";
+// import HereMap from "./components/HereMap.vue";
 export default {
   name: "app",
-  components: { Navbar, Footer, HereMap },
+  components: { Navbar, Footer, Leaflet },
   data() {
     return {
       navigation: null,
